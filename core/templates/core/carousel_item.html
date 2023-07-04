@@ -1,0 +1,29 @@
+<div class="text-center">
+  {{table.file_name}}
+</div>
+<div class="row p-1">
+  {% load static %}
+  <div class="col">
+    <img class="img-fluid img-thumbnail" src="{% static 'fpt/balance/image4.jpg' %}" alt="My image" />
+  </div>
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          {% for title in table.table_titles %}
+              <th scope="col" style="font-size: 10px;">{{ title }}</li>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+          {% for row in table.table_contents %}
+              <tr>
+                  {% for col in row %}
+                      <td style="font-size: 10px;">{{col}}</td>
+                  {% endfor %}
+              </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
