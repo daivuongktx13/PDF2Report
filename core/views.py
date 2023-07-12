@@ -6,6 +6,7 @@ import pandas as pd
 import glob
 import os
 import time
+from .services import getReportCategory
 
 # Create your views here.
 
@@ -41,22 +42,12 @@ def convert_file(request):
 def view(request):
     run_name = request.GET.get('run')
     template = loader.get_template("core/view.html")
-    csv_file_paths = glob.glob(f"static/{run_name}/balance/image*.csv")
-    imagefile_paths = glob.glob(f"static/{run_name}/balance/image*.jpg")
-    tables = []
-    for csv_file_path, image_file_path in zip(csv_file_paths, imagefile_paths):
-        data = pd.read_csv(csv_file_path)
-        data = data.fillna("")
-        serialized_data = data.drop("Unnamed: 0", axis = 1).values
-        table = {
-            "image": "/".join(image_file_path.split("/")[1:]),
-            "file_name": os.path.basename(csv_file_path),
-            "table_titles" : serialized_data[0],
-            "table_contents":  serialized_data[1:],
-        }
-        tables.append(table)
+    balance = getReportCategory(run_name, 'balance')
+    cashflow = getReportCategory(run_name, 'cashflow')
+    income = getReportCategory(run_name, 'income')
     context = {
-        "tables": list(enumerate(tables)),
-        "indexes": list(range(len(tables)))
+        "balance": balance,
+        "cashflow": cashflow,
+        "income": income
     }
     return HttpResponse(template.render(context, request))

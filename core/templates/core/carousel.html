@@ -1,14 +1,14 @@
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+<div id="carouselExampleControlsNoTouching{{name}}" class="carousel slide" data-bs-touch="false">
     <div class="carousel-indicators position-static d-flex flex-row gap-2 justify-content-center align-items-center py-2" >
-        <div class="rounded-circle border-0 mx-2" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="rounded-circle border-0 mx-2" data-bs-target="#carouselExampleControlsNoTouching{{name}}" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></div>
         {% for index in indexes %}
             {% if index == 0 %}
-            <div data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide-to="{{index}}" class="active" aria-current="true" aria-label="Slide {{index}}">{{index}}</div>
+            <div data-bs-target="#carouselExampleControlsNoTouching{{name}}" data-bs-slide-to="{{index}}" class="active" aria-current="true" aria-label="Slide {{index}}">{{index}}</div>
             {% else %}
-            <div data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide-to="{{index}}" aria-label="Slide {{index}}">{{index}}</div>
+            <div data-bs-target="#carouselExampleControlsNoTouching{{name}}" data-bs-slide-to="{{index}}" aria-label="Slide {{index}}">{{index}}</div>
             {% endif %}
         {% endfor %}
-        <div class="rounded-circle border-0 mx-2" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="rounded-circle border-0 mx-2" data-bs-target="#carouselExampleControlsNoTouching{{name}}" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></div>
     </div>
     
     <div class="carousel-inner">
@@ -24,6 +24,4 @@
             {% endif %}
         {% endfor %}
     </div>
-  </div>
-  
 </div>
