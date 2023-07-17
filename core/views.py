@@ -50,6 +50,7 @@ def view(request):
         "balance": balance,
         "cashflow": cashflow,
         "income": income,
-        "fin": fin
+        "fin": fin,
+        "run": run_name
     }
     return HttpResponse(template.render(context, request))

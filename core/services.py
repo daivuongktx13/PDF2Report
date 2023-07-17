@@ -6,6 +6,8 @@ def getReportCategory(run_name, category):
     assert category in ["balance", "cashflow", "income"]
     csv_file_paths = glob.glob(f"static/{run_name}/{category}/image*.xlsx")
     imagefile_paths = glob.glob(f"static/{run_name}/{category}/image*.jpg")
+    imagefile_paths.sort()
+    csv_file_paths.sort()
     tables = []
     for csv_file_path, image_file_path in zip(csv_file_paths, imagefile_paths):
         data = pd.read_csv(csv_file_path)
@@ -28,6 +30,8 @@ def getTextCategory(run_name):
     category = "financial_statement"
     text_file_paths = glob.glob(f"static/{run_name}/{category}/image*.txt")
     imagefile_paths = glob.glob(f"static/{run_name}/{category}/image*.jpg")
+    imagefile_paths.sort()
+    text_file_paths.sort()
     texts = []
     for text_file_path, image_file_path in zip(text_file_paths, imagefile_paths):
         with open(text_file_path, 'r', encoding="utf-8") as file:
