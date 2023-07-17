@@ -27,10 +27,10 @@ def convert_file(request):
                 destination.write(chunk)
         start = time.time()
         print("Execute command...")
-        # os.system(f"python main.py --dir {file_path}")
+        os.system(f"python main.py --dir {file_path}")
         print("Execute command complete")
         folder = uploaded_file.name.split(".")[0]
-        # os.system(f"cp -r ./result/{folder} ./static/")
+        os.system(f"cp -r ./result/{folder} ./static/")
         print(f"Time: {time.time() - start}")
         # Return a JSON response indicating success
         return JsonResponse({'url': f'/view?run={folder}'})

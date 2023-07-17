@@ -6,7 +6,7 @@ from vietocr.tool.config import Cfg
 from PIL import Image
 import torch
 
-def redistributed(boxes, texts):
+def redistributed(boxes, texts, image_width):
     new_boxes = [boxes[0]]
     new_texts = [texts[0]]
     for idx in range(1, len(texts)):
@@ -14,10 +14,8 @@ def redistributed(boxes, texts):
             new_boxes.append(boxes[idx])
             new_texts.append(texts[idx])
         else:
-            if not texts[idx][0].islower():
-                new_boxes.append(boxes[idx])
-                new_texts.append(texts[idx])
-            else:
+            if texts[idx][0].islower() or \
+                ((texts[idx][0] == "(" or texts[idx][0] == "{" or texts[idx][0] == "[") and boxes[idx][0][0] < image_width/6):
                 b = -1
                 r = 1e9
                 for i in range(max(0,len(new_boxes)-10), len(new_boxes)):
@@ -39,6 +37,11 @@ def redistributed(boxes, texts):
 
                 new_boxes.append([[x1_res, y1_res], [x2_res, y1_res], [x2_res, y2_res], [x1_res, y2_res]])
                 new_boxes.pop(b)
+
+            else:
+                new_boxes.append(boxes[idx])
+                new_texts.append(texts[idx])
+
     return new_boxes, new_texts
 
 def intersection(box1, box2):
@@ -108,8 +111,9 @@ class BorderlessTable():
             cropped_img = Image.fromarray(cropped_img)
             texts.append(self.detector.predict(cropped_img))
 
-        boxes, texts = redistributed(boxes, texts)
+        boxes, texts = redistributed(boxes, texts, self.image_width)
         prob = [int(box[2][1])/self.image_height for box in boxes]
+        h_prob = [(int(box[2][1])-int(box[0][1])) for box in boxes]
 
         #expand the box horizontally and vertically 
         horiz_boxes = []
@@ -122,7 +126,7 @@ class BorderlessTable():
         #Selects a single box out of many overlapping boxes using non-max-suppression with iou_threshold=0.1
         horiz_out = tf.image.non_max_suppression(
             horiz_boxes,
-            prob,
+            h_prob,
             max_output_size=1000,
             iou_threshold=0.3,
             score_threshold=float('-inf'),
@@ -155,9 +159,15 @@ class BorderlessTable():
                 resultant = intersection(horiz_boxes[horiz_line[i]], vert_boxes[vert_line[ordered_boxes[j]]])
                 for b in range(len(boxes)):
                     the_box = [boxes[b][0][0], boxes[b][0][1], boxes[b][2][0], boxes[b][2][1]]
-                    if(iou(resultant, the_box)>0.4*((boxes[b][2][0]-boxes[b][0][0])*(boxes[b][2][1]-boxes[b][0][1]))):
+                    if(iou(resultant, the_box)>0.2*((boxes[b][2][0]-boxes[b][0][0])*(boxes[b][2][1]-boxes[b][0][1]))):
                         data[j] = {}
-                        table[i][j] = texts[b]
+                        if table[i][j] != "":
+                            if j <=1: 
+                                table[i][j] = table[i][j] + " " + texts[b]
+                            else:
+                                table[i][j] = table[i][j] + "\n" + texts[b]
+                        else:
+                            table[i][j] = texts[b]
                         data[j]['coordinate'] = [boxes[b][0][0], boxes[b][0][1], boxes[b][2][0], boxes[b][2][1]]
                         data[j]['text'] = texts[b]
             metadata[i] = data

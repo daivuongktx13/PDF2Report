@@ -12,10 +12,9 @@ import cv2
 import json
 from wand.image import Image
 import time
-from util.postprocess import postprocess_table
 from paddleocr import PPStructure
 
-def take_page(images, start, end, tab_model, ocr, tesseract_config, vietocr_weight, folder,  table_engine, name):
+def take_page(images, start, end, tab_model, ocr, tesseract_config, vietocr_weight, folder, name):
     for i in range(start, end):
         #read images and preprocessing
         image = images[i]
@@ -27,7 +26,7 @@ def take_page(images, start, end, tab_model, ocr, tesseract_config, vietocr_weig
         y1 = int(boxes[1])
         x2 = int(boxes[2])
         y2 = int(boxes[3])
-        im = image[y1:y2, max(0, x1-30):min(x2+30, image.shape[1])]
+        im = image[max(0,y1-5):y2, max(0, x1-30):min(x2+30, image.shape[1])]
         
         #write table image
         if not os.path.exists('result/{}/{}'.format(folder, name)):
@@ -48,10 +47,10 @@ def take_page(images, start, end, tab_model, ocr, tesseract_config, vietocr_weig
             json.dump(metadata, f, ensure_ascii=False, indent=4)
 
         #process cell span
-        postprocess_table('result/{}/{}/image{}.xlsx'.format(folder, name, str(i)), 'result/{}/{}/image{}.jpg'.format(folder, name, str(i)), table_engine)
+        # postprocess_table('result/{}/{}/image{}.xlsx'.format(folder, name, str(i)), 'result/{}/{}/image{}.jpg'.format(folder, name, str(i)), table_engine)
 
-def parse_pdf(dir, sig_model, tab_model, ocr, tesseract_config, vietocr_weight, table_engine, folder):
-    images = convert_from_path(dir, dpi=300)
+def parse_pdf(dir, sig_model, tab_model, ocr, tesseract_config, vietocr_weight, folder):
+    images = convert_from_path(dir, dpi=400)
 
     pdf = PdfAnalysis(images, tab_model, sig_model)
     pages = pdf()
@@ -61,9 +60,9 @@ def parse_pdf(dir, sig_model, tab_model, ocr, tesseract_config, vietocr_weight, 
         image = prepocess_image(image, sig_model)
         images[i] = image
 
-    take_page(images, pages[0], pages[1]+1, tab_model, ocr, tesseract_config, vietocr_weight, folder, table_engine, name="balance") #balance sheet
-    take_page(images, pages[1]+1, pages[2]+1, tab_model, ocr, tesseract_config, vietocr_weight, folder, table_engine, name="income") #income statement
-    take_page(images, pages[2]+1, pages[3]+1, tab_model, ocr, tesseract_config, vietocr_weight, folder, table_engine, name="cashflow") #cash flow statement
+    take_page(images, pages[0], pages[1]+1, tab_model, ocr, tesseract_config, vietocr_weight, folder, name="balance") #balance sheet
+    take_page(images, pages[1]+1, pages[2]+1, tab_model, ocr, tesseract_config, vietocr_weight, folder, name="income") #income statement
+    take_page(images, pages[2]+1, pages[3]+1, tab_model, ocr, tesseract_config, vietocr_weight, folder, name="cashflow") #cash flow statement
 
     #processing financial statement
     for i in range(pages[3]+1, len(images)):
@@ -111,12 +110,14 @@ def main(args):
     # psm --> page segmentation mode = 6 >> Assume as single uniform block of text (How a page of text can be analyzed)
     tesseract_config = r'--oem 3 --psm 6'
     table_engine = PPStructure(layout=False, show_log=False)
+    if not os.path.exists('result'):
+        os.mkdir('result')
     if os.path.isfile(args.dir):
         folder = args.dir.split('/')[-1]
         folder = folder.split('.')[-2]
         if not os.path.exists('result/{}'.format(folder)):
             os.mkdir('result/{}'.format(folder))
-        parse_pdf(args.dir, sig_model, tab_model, ocr, tesseract_config, vietocr_weight, table_engine, folder)
+        parse_pdf(args.dir, sig_model, tab_model, ocr, tesseract_config, vietocr_weight, folder)
     else:
         print("Sorry, currently we only support to process file!!!")
     end = time.time()
