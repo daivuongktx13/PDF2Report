@@ -1,0 +1,39 @@
+,0,1,2,3,4,5
+0,,,,,Năm 2020,Năm 2019
+1,CHỈ TIÊU,CHỈ TIÊU,MS,TM,VND,VND
+2,,Lưu chuyển tiền từ hoạt động kinh doanh,,,,
+3,1.,Lợi nhuận trước thuế,01,,108.603.705,(429.831.236)
+4,2,Điều chỉnh cho các khoản,,,(1.073.095.384),(1.051.864.346)
+5,,Khấu hao TSCĐ và BĐSĐT,02,,231.884.378,275.727.580
+6,,"Lãi, lỗ từ hoạt động đầu tư",05,,(1.397.150.850),(1.511.257.680)
+7,,Chi phí lãi vay,06,,92.171.088,183.665.754
+8,3.,"Lợi nhuận từ hoạt động kinh doanh trước thay đổi
+vốn lưu động",08,,(964.491.679),(1.481.695.582)
+9,,"Tăng, giàm các khoản phải thu",09,,(11.594.374.185),97.776.258
+10,,"Tăng, giảm hàng tồn kho",10,,10.743.613.424,(2.342.300.876)
+11,,"Tăng, giảm các khoản phải trà",11,,(20.451.898.588),(743.001.225)
+12,,"Tăng, giảm chi phí trả trước",12,,(38.210.480),(58.526.187)
+13,,Tiền lãi vay đã trả,14,,(92.171.088),(183.665.754)
+14,,Thuế thu nhập doanh nghiệp đã nộp,15,,(98.304.946),(379.178.000)
+15,,Tiền thu khác từ hoạt động kinh doanh,16,,4.414.126.200,35.000.000
+16,,Tiền chi khác cho hoạt động kinh doanh,17,,(4.419.826.200),(40.000.000)
+17,,Lưu chuyển tiền thuần từ hoạt động kinh doanh,20,,(22.501.537.542),(5.095.591.366)
+18,,II. Lưu chuyển tiền từ hoạt động đầu tư,,,,
+19,1.,"Tiền thu từ thanh lý, nhượng bán TSCĐ
+và các tài sản dài hạn khác",22,,467.501.818,83.636.364
+20,2,"Tiền chi cho vay, mua các công cụ nợ
+của đơn vị khác",23,,,(20.520.000.000)
+21,3.,"Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị
+khác",24,,20.520.000.000,20.520.000.000
+22,4.,"Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia",27,,929.649.032,1.045.476.589
+23,,Lưu chuyển tiền thuần từ hoạt động đầu tư,30,,21.917.150.850,1.129.112.953
+24,,III. Lưu chuyển tiền từ hoạt động tài chính,,,,
+25,1.,Tiền thu từ đi vay,33,,30.600.000.000,38.400.000.000
+26,2.,Tiền trả nợ gốc vay,34,,(30.600.000.000),(38.400.000.000)
+27,,Lưu chuyển tiền thuần từ hoạt động tài chính,40,,,
+28,,"Lưu chuyển tiền thuần trong kỳ
+(50?20430-40)",50,,(584.386.692),(3.966.478.413)
+29,,Tiền và tương đương tiền đầu kỳ,60,,20.625.867.519,24.592.345.932
+30,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,61,,,
+31,,"Tiền và tương đương tiền cuối kỳ
+(70 ? 50?60?61)",70,5.1,20.041.480.827,20.625.867.519

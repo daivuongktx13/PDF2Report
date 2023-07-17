@@ -1,0 +1,12 @@
+<div class="text-center">
+    {{text.file_name}}
+  </div>
+  <div class="row p-1">
+    {% load static %}
+    <div class="col">
+      <img class="img-fluid img-thumbnail" src="{% static text.image %}" alt="My image" />
+    </div>
+    <div class="col">
+      <div style="white-space: pre-line;">{{text.content}}</div>
+    </div>
+  </div>

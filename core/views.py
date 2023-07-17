@@ -6,7 +6,7 @@ import pandas as pd
 import glob
 import os
 import time
-from .services import getReportCategory
+from .services import getReportCategory, getTextCategory
 
 # Create your views here.
 
@@ -45,9 +45,11 @@ def view(request):
     balance = getReportCategory(run_name, 'balance')
     cashflow = getReportCategory(run_name, 'cashflow')
     income = getReportCategory(run_name, 'income')
+    fin = getTextCategory(run_name)
     context = {
         "balance": balance,
         "cashflow": cashflow,
-        "income": income
+        "income": income,
+        "fin": fin
     }
     return HttpResponse(template.render(context, request))

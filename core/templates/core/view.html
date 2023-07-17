@@ -86,6 +86,18 @@
         >
           Income
         </button>
+        <button
+          class="nav-link"
+          id="v-pills-messages-financial-statement"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-financial-statement"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-financial-statement"
+          aria-selected="false"
+        >
+          Financial Statement
+        </button>
       </div>
       <div class="tab-content" id="v-pills-tabContent">
         <div
@@ -114,6 +126,15 @@
           tabindex="2"
         >
         {% include "core/carousel.html" with tables=income.tables indexes=income.indexes name=income.name %}
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-pills-financial-statement"
+          role="tabpanel"
+          aria-labelledby="v-pills-messages-financial-statement"
+          tabindex="3"
+        >
+        {% include "core/text_carousel.html" with texts=fin.texts indexes=fin.indexes name=fin.name %}
         </div>
       </div>
     </div>

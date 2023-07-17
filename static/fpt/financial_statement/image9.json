@@ -1,0 +1,416 @@
+{
+    "0": {
+        "coordinate": [
+            558,
+            122,
+            2021,
+            186
+        ],
+        "text": "CÔNG TY TNHH MTV LƯƠNG THỰC LƯƠNG YÊN"
+    },
+    "1": {
+        "coordinate": [
+            553,
+            195,
+            2332,
+            264
+        ],
+        "text": "Báo cáo tài chính cho năm tài chính kết thúc ngày 31 tháng 12 năm 2020"
+    },
+    "2": {
+        "coordinate": [
+            548,
+            288,
+            1640,
+            352
+        ],
+        "text": "THUYẾT MINH BÁO CÁO TÀI CHÍNH"
+    },
+    "3": {
+        "coordinate": [
+            2722,
+            288,
+            3117,
+            357
+        ],
+        "text": "MÃU B 09-DN"
+    },
+    "4": {
+        "coordinate": [
+            539,
+            396,
+            613,
+            464
+        ],
+        "text": "1."
+    },
+    "5": {
+        "coordinate": [
+            741,
+            391,
+            1462,
+            459
+        ],
+        "text": "THÔNG TIN KHÁI QUÁT"
+    },
+    "6": {
+        "coordinate": [
+            543,
+            542,
+            637,
+            606
+        ],
+        "text": "1.1"
+    },
+    "7": {
+        "coordinate": [
+            746,
+            537,
+            1314,
+            606
+        ],
+        "text": "Hình thức sở hữu vốn"
+    },
+    "8": {
+        "coordinate": [
+            736,
+            689,
+            3117,
+            772
+        ],
+        "text": "Công ty TNHH MTV Lương thực Lương Yên (gọi tắt là ?Công ty?) được thành lập theo Quyết"
+    },
+    "9": {
+        "coordinate": [
+            736,
+            757,
+            3117,
+            850
+        ],
+        "text": "định 79/QĐ-TCILTMB-TCLĐ ngày 18/06/2012 của Tổng Công ty Lương thực Miến Bắc, Công"
+    },
+    "10": {
+        "coordinate": [
+            741,
+            845,
+            3112,
+            913
+        ],
+        "text": "ty đang hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp số 0105927553 do Sở Kế hoạch"
+    },
+    "11": {
+        "coordinate": [
+            746,
+            913,
+            3112,
+            982
+        ],
+        "text": "và Đầu tư thành phố Hà Nội cấp lẫn đầu ngày 25 tháng 06 năm 2012, đăng ký thay đổi lần thứ 2"
+    },
+    "12": {
+        "coordinate": [
+            741,
+            987,
+            3112,
+            1055
+        ],
+        "text": "ngày 11 tháng 08 năm 2017. Vốn điều lệ của Công ty là 40.000.000.060 đồng (Bốn mươi tỷ"
+    },
+    "13": {
+        "coordinate": [
+            741,
+            1055,
+            2248,
+            1123
+        ],
+        "text": "đồng), thuộc sở hữu của Tổng Công ty Lương thực Miền Bắc."
+    },
+    "14": {
+        "coordinate": [
+            741,
+            1153,
+            2910,
+            1221
+        ],
+        "text": "Tên Công ty viết bằng tiếng nước ngoài là: LUONGYEN FOOD COMPANY LIMITED,"
+    },
+    "15": {
+        "coordinate": [
+            74,
+            1231,
+            143,
+            1314
+        ],
+        "text": "1"
+    },
+    "16": {
+        "coordinate": [
+            741,
+            1241,
+            2786,
+            1309
+        ],
+        "text": "Trụ sở Công ty tại: Số 6 Ngô Quyền, phường Lý Thái Tổ, quận Hoàn Kiếm, Hà Nội"
+    },
+    "17": {
+        "coordinate": [
+            736,
+            1333,
+            2534,
+            1421
+        ],
+        "text": "Số lao động bình quân trong năm 2020 là 35 người (năm 2019: 36 người)."
+    },
+    "18": {
+        "coordinate": [
+            736,
+            1509,
+            1882,
+            1597
+        ],
+        "text": "Ngành nghề kinh doanh và hoạt động chính"
+    },
+    "19": {
+        "coordinate": [
+            548,
+            1529,
+            657,
+            1587
+        ],
+        "text": "1.2."
+    },
+    "20": {
+        "coordinate": [
+            49,
+            1631,
+            133,
+            1734
+        ],
+        "text": "1"
+    },
+    "21": {
+        "coordinate": [
+            742,
+            1651,
+            1704,
+            1744
+        ],
+        "text": "Ngành nghề kinh doanh của Công ty"
+    },
+    "22": {
+        "coordinate": [
+            741,
+            1797,
+            3058,
+            1866
+        ],
+        "text": "- Thu mua, bảo quản, chế biến, bán buôn, bán lẻ, dự trữ, lưu thông lương thực, nông sản, thực phẩm;"
+    },
+    "23": {
+        "coordinate": [
+            40,
+            1904,
+            142,
+            1984
+        ],
+        "text": "1"
+    },
+    "24": {
+        "coordinate": [
+            746,
+            1910,
+            2362,
+            1978
+        ],
+        "text": "- Bán buôn nhiên liệu động cơ trong các cửa hàng chuyên doanh;"
+    },
+    "25": {
+        "coordinate": [
+            742,
+            2012,
+            1753,
+            2091
+        ],
+        "text": "- Cho thuê tài sản, nhà, kho, văn phòng"
+    },
+    "26": {
+        "coordinate": [
+            751,
+            2125,
+            3058,
+            2193
+        ],
+        "text": "Hoạt động chính của Công ty trong năm: Thu mua, bảo quản chế biến, bán buôn, bán lẻ, dự trữ;"
+    },
+    "27": {
+        "coordinate": [
+            64,
+            2178,
+            128,
+            2271
+        ],
+        "text": "3"
+    },
+    "28": {
+        "coordinate": [
+            741,
+            2188,
+            2786,
+            2276
+        ],
+        "text": "lưu thông lương thực, nông sản và các mặt hàng thiết yếu khác; cho thuê văn phòng."
+    },
+    "29": {
+        "coordinate": [
+            741,
+            2291,
+            1872,
+            2379
+        ],
+        "text": "Chu kỳ sản xuất, kinh doanh thông thường"
+    },
+    "30": {
+        "coordinate": [
+            548,
+            2301,
+            667,
+            2374
+        ],
+        "text": "1.3."
+    },
+    "31": {
+        "coordinate": [
+            3246,
+            2359,
+            3300,
+            2481
+        ],
+        "text": "2"
+    },
+    "32": {
+        "coordinate": [
+            746,
+            2393,
+            2574,
+            2481
+        ],
+        "text": "Chu kỳ sản xuất kinh doanh thông thường của Công ty không quá 12 tháng."
+    },
+    "33": {
+        "coordinate": [
+            54,
+            2432,
+            119,
+            2496
+        ],
+        "text": "03"
+    },
+    "34": {
+        "coordinate": [
+            747,
+            2500,
+            1348,
+            2589
+        ],
+        "text": "Cấu trúc doanh nghiệp"
+    },
+    "35": {
+        "coordinate": [
+            543,
+            2511,
+            662,
+            2584
+        ],
+        "text": "1.4"
+    },
+    "36": {
+        "coordinate": [
+            3236,
+            2564,
+            3300,
+            2638
+        ],
+        "text": "K"
+    },
+    "37": {
+        "coordinate": [
+            756,
+            2618,
+            3088,
+            2686
+        ],
+        "text": "Tại ngày 31 tháng 12 năm 2020, tổ chức của Công ty bao gồm trụ sở chính tại thành phố Hà Nội"
+    },
+    "38": {
+        "coordinate": [
+            746,
+            2681,
+            2030,
+            2770
+        ],
+        "text": "và Chi nhánh tại thành phố Sa Đéc, tỉnh Đồng Tháp."
+    },
+    "39": {
+        "coordinate": [
+            543,
+            2852,
+            613,
+            2921
+        ],
+        "text": "2"
+    },
+    "40": {
+        "coordinate": [
+            756,
+            2852,
+            2564,
+            2916
+        ],
+        "text": "NĂM TÀI CHÍNH, ĐƠN VỊ TIỀN TỆ SỬ DỤNG TRONG KẾ TOÁN"
+    },
+    "41": {
+        "coordinate": [
+            742,
+            2989,
+            1130,
+            3068
+        ],
+        "text": "Năm tài chính"
+    },
+    "42": {
+        "coordinate": [
+            741,
+            3111,
+            3014,
+            3199
+        ],
+        "text": "Năm tài chính của Công ty bắt đầu từ ngày 01 tháng 01 và kết thúc vào ngày 31 tháng 12 hàng năm"
+    },
+    "43": {
+        "coordinate": [
+            746,
+            3263,
+            1690,
+            3341
+        ],
+        "text": "Đơn vị tiền tệ sử dụng trong kế toán"
+    },
+    "44": {
+        "coordinate": [
+            756,
+            3385,
+            2500,
+            3453
+        ],
+        "text": "Báo cáo tài chính kèm theo được trình bày bằng Đồng Việt Nam (VND)"
+    },
+    "45": {
+        "coordinate": [
+            1808,
+            4455,
+            1887,
+            4523
+        ],
+        "text": "10"
+    }
+}
